@@ -14,7 +14,8 @@ const home = document.querySelector("[home]")
 const features = document.querySelector("[features]")
 const account = document.querySelector("[account]")
 const download = document.querySelector("[unduh]")
-const contact = document.querySelector("[contact]")
+const contact1 = document.querySelector("[contact1]")
+const contact2 = document.querySelector("[contact2]")
 
 home.addEventListener("click", function(){
     for (let i = 0; i < UI.length; i++){
@@ -76,7 +77,22 @@ download.addEventListener("click", function(){
     }
 })
 
-contact.addEventListener("click", function(){
+contact1.addEventListener("click", function(){
+    for (let i = 0; i < UI.length; i++){
+        if (i != 4) {
+            if (UI[i].classList.contains("hide")) {
+
+            } else {
+                elemToggleFunc(UI[i])
+            }
+        } else if ( UI[i].classList.contains("hide") ) {
+            elemToggleFunc(UI[i])
+        }
+
+    }
+})
+
+contact2.addEventListener("click", function(){
     for (let i = 0; i < UI.length; i++){
         if (i != 4) {
             if (UI[i].classList.contains("hide")) {
