@@ -137,7 +137,7 @@ h3 {
 
 .p5 {
     color: var(--white);
-    font-size: 14px;
+    font-size: max(0.972vw, 8px);
     font-weight: 700;
 }
 
@@ -190,6 +190,7 @@ h3 {
     visibility: hidden;
     width: 0;
     height: 0;
+    scale: 0;
 }
 
 /* HEADER */
@@ -453,15 +454,25 @@ h3 {
 }
 
 /* FOOTER */
-
 .footer {
-    padding-block: 60px;
+    padding-block: var(--section-padding);
 }
 
 .footer .container {
     display: flex;
     flex-direction: column;
-    gap: 88px;
+    gap: 6.11px;
+}
+
+.social-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.social-content .btn {
+    align-self: center;
 }
 
 .content-top {
@@ -470,9 +481,90 @@ h3 {
     justify-content: space-between;
 }
 
+.content-top img {
+    width: max(19.027vw, 90px);
+}
+
+.wrapper .header-top-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-top-social-link {
+    color: var(--white);
+    font-size: var(--fs-5);
+}
+
 .content-bottom {
+    padding: 2.77vw;
+    text-align: center;
+}
+
+/*****************************
+----------FEATRUES------------
+*****************************/
+.features .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 35.486vw;
+}
+
+/*****************************
+-----------ENROLL-------------
+*****************************/
+.about .p1 {
+    font-size: max(2.5vw, 10px);
+}
+
+.about form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0);
+    gap: 2.77vw;
+}
+
+.about form input {
+    padding: 0.694vw;
+    padding-inline: 2vw;
+    border: 1px solid var(--white);
+    border-radius: 2.77vw;
+    background: transparent;
+    color: var(--white);
+}
+
+.about .btn {
     align-self: center;
 }
+
+/*****************************
+----------DOWNLOAD------------
+*****************************/
+.download .container {
+    text-align: center;
+}
+
+.download .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.77vw;
+}
+
+.download .card {
+    min-width: max(24.305vw, 150px);
+    min-height: max(24.305vw, 150px);
+}
+
+/*****************************
+---------CONTACT US-----------
+*****************************/
+.contact-us .content {
+    text-align: center;
+}
+
 
 @media (max-width:970px) {
 
@@ -510,6 +602,16 @@ h3 {
         all: unset;
     }
 
+    .features .card-area,
+    .download .card-area,
+    .contact-us .card-area {
+        padding-block: var(--container-padding);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3.4723vw;
+    }
+
     .has-scrollbar {
         display: flex;
         align-items: center;
@@ -520,11 +622,6 @@ h3 {
         scroll-padding-left: 15px;
         padding-bottom: var(--container-padding);
         scroll-snap-type: inline mandatory;
-    }
-
-    .has-scrollbar2 {
-        display: flex;
-        overflow-x: auto;
     }
 
     .has-scrollbar > li {
@@ -588,7 +685,7 @@ h3 {
         --fs-4: 2.086vw;
         --fs-3: 1.738vw;
         --fs-2: 1.3900000000000001vw;
-        --fs-1: 1.04;
+        --fs-1: 7px;
         }
 
 }
@@ -635,7 +732,6 @@ h3 {
     }
 
     
-
     /* HERO */
     .hero-content .btn {
         display: block;
